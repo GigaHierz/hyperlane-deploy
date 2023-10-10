@@ -26,13 +26,72 @@ export const chains: ChainMap<ChainMetadata> = {
     //   gasLimit: 1000000
     // },
   },
-  anvil2: {
-    name: 'anvil2',
+  optimism: {
+    name: 'optimism',
     protocol: ProtocolType.Ethereum,
-    chainId: 31338,
+    chainId: 300,
     rpcUrls: [
       {
-        http: 'http://127.0.0.1:8555',
+        http: 'https://rpc.ankr.com/optimism',
+      },
+    ],
+  },
+  // optimismGoerli: {
+  //   name: 'optimismGoerli',
+  //   protocol: ProtocolType.Ethereum,
+  //   chainId: 420,
+  //   rpcUrls: [
+  //     {
+  //       http: 'https://optimism-goerli.publicnode.com',
+  //     },
+  //     // {
+  //     //   http: 'https://rpc.goerli.optimism.gateway.fm',
+  //     // },
+  //     // {
+  //     //   http: 'https://opt-goerli.g.alchemy.com/v2/demo',
+  //     // },
+  //     // {
+  //     //   http: 'https://endpoints.omniatech.io/v1/op/goerli/public',
+  //     // },
+  //   ],
+  // },
+  celo: {
+    name: 'celo',
+    protocol: ProtocolType.Ethereum,
+    chainId: 42220,
+    rpcUrls: [
+      {
+        http: 'https://rpc.ankr.com/polygon',
+      },
+    ],
+  },
+  alfajores: {
+    name: 'alfajores',
+    protocol: ProtocolType.Ethereum,
+    chainId: 44787,
+    rpcUrls: [
+      {
+        http: 'https://alfajores-forno.celo-testnet.org',
+      },
+    ],
+  },
+  polygon: {
+    name: 'polygon',
+    protocol: ProtocolType.Ethereum,
+    chainId: 137,
+    rpcUrls: [
+      {
+        http: 'https://rpc.ankr.com/polygon',
+      },
+    ],
+  },
+  mumbai: {
+    name: 'mumbai',
+    protocol: ProtocolType.Ethereum,
+    chainId: 80001,
+    rpcUrls: [
+      {
+        http: 'https://polygon-mumbai-bor.publicnode.com	',
       },
     ],
   },

@@ -7,10 +7,11 @@ import type { WarpRouteConfig } from '../src/warp/config';
 export const warpRouteConfig: WarpRouteConfig = {
   base: {
     // Chain name must be in the Hyperlane SDK or in the chains.ts config
-    chainName: 'anvil1',
-    type: TokenType.native, //  TokenType.native or TokenType.collateral
+    chainName: 'optimism',
+    type: TokenType.collateral, //  TokenType.native or TokenType.collateral
     // If type is collateral, a token address is required:
-    // address: '0x123...'
+    address: '0x7F5c764cBc14f9669B88837ca1490cCa17c31607', // usdc - optimism
+    // address: '0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359', // usdc - polygon
     // If the token is an NFT (ERC721), set to true:
     // isNft: boolean
 
@@ -19,7 +20,7 @@ export const warpRouteConfig: WarpRouteConfig = {
   },
   synthetics: [
     {
-      chainName: 'anvil2',
+      chainName: 'celo',
 
       // Optionally specify a name, symbol, and totalSupply
       // If not specified, the base token's properties will be used
